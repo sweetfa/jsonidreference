@@ -1,0 +1,58 @@
+{
+  "@type": "FlightReservation",
+  "@id": 1,
+  "reservationFor": [
+    {
+      "@type": "Flight",
+      "@id": 2,
+      "hasPart": [
+        {
+          "@type": "Flight",
+          "@id": 6,
+          "flightNumber": "123"
+        },
+        {
+          "@type": "Flight",
+          "@id": 3,
+          "flightNumber": "124"
+        }
+      ]
+    }
+  ],
+  "ticket": [
+    {
+      "@type": "Ticket",
+      "@id": 4,
+      "ticketNumber": "TKT123",
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "@id": 5,
+          "propertyId":"FlightReference",
+          "value": "indicating",
+          "valueReference": 3
+        }
+      ],
+      "subjectOf": [
+        3
+      ]
+    },
+    {
+      "@type": "Ticket",
+      "@id": 7,
+      "ticketNumber": "TKT123",
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "@id": 8,
+          "propertyId":"FlightReference",
+          "value": "indicating",
+          "valueReference": 6
+        }
+      ],
+      "subjectOf": [
+        6
+      ]
+    }
+  ]
+}
